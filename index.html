@@ -20,7 +20,12 @@
 </head>
 
 <body>
-    <header>    
+    <header>           
+              
+        <div class="progress">
+            <div class="progress__status"> LOADING... </div>
+        </div>
+                
         <div class="header_line">
             <div class="logo-header-contour">
                 <img class="logo-header" src="assets/images/logo/ohmyfood.png" alt="logo_ohmyfood">
@@ -42,6 +47,7 @@
     </header>
 
     <main> 
+    <div class="main-part">
         <section>
             <div>
                 <h2> Fonctionnement</h2>
@@ -93,46 +99,78 @@
             </div>
             <div class="four-restaurants-bloc">
                 <div class="first-two-restaurents">
-                    <a class="single-restaurant-bloc" href="restaurants/palette-index.html"> <div>                       
-                            <div class="restaurant-image-contour">
-                                <div class="badge1">
-                                    <span class="text-nouveau"><strong> Nouveau</strong> </span>
-                                </div>
-                                <img class="restaurant-image" src="assets/images/restaurants/palette-image.jpg" title="La palette du goût" alt="image La palette du goût">
-                            </div>  
-                        <div class="restaurant-image-name-and-like">
-                            <div class="restaurant-image-name">
-                               <p> <strong> La palette du goût </strong></p>
-                            </div>
-                            <div class="like-icon-contour">
-                                <i class="fa-regular fa-heart like-icon"></i>
-                            </div>
-                        </div>
-                        <div class="restaurant-image-location">
-                            <p> Ménilmontant </p>
-                        </div>
-                    </div> </a>
 
-                    <a class="single-restaurant-bloc" href="restaurants/note-index.html"> <div>
+                    <a href="restaurants/palette-index.html">
+                    <div class="single-restaurant-bloc">
                         <div class="restaurant-image-contour">
-                            <img class="restaurant-image" src="assets/images/restaurants/note-image.jpg" title="La note enchantée" alt="image La note enchantée">
-                        </div>
+                            <div class="badge1">
+                                <span class="text-nouveau-1"><strong> Nouveau</strong> </span>
+                            </div>
+                            <img class="restaurant-image" src="assets/images/restaurants/palette-image.jpg" title="La palette du goût" alt="image La palette du goût">
+                        </div>  
+                    
                         <div class="restaurant-image-name-and-like">
                             <div class="restaurant-image-name">
-                                <p> <strong> La note enchantée </strong></p>
+                                <strong> La palette du goût </strong>
                             </div>
                             <div class="like-icon-contour">
-                                <i class="fa-regular fa-heart like-icon"></i>
+                                <i class="fa-regular fa-heart like-icon-empty like-icon"></i>
+                                <i class="fa-solid fa-heart like-icon-filled like-icon"></i>                               
                             </div>
                         </div>
                         <div class="restaurant-image-location">
-                            <p> Charonne </p>
+                            Ménilmontant
                         </div>
                     </div> </a>
-                </div>
 
+                    <a href="restaurants/note-index.html">
+                        <div class="single-restaurant-bloc">
+                            <div class="restaurant-image-contour">
+                                <div class="badge2">
+                                    <span class="text-nouveau-2"><strong> Nouveau</strong> </span>
+                                </div>
+                                <img class="restaurant-image" src="assets/images/restaurants/note-image.jpg" title="La note enchantée" alt="image La note enchantée">
+                            </div>  
+                        
+                            <div class="restaurant-image-name-and-like">
+                                <div class="restaurant-image-name">
+                                    <strong> La note enchantée </strong>
+                                </div>
+                                <div class="like-icon-contour">
+                                        <i class="fa-regular fa-heart like-icon-empty like-icon"></i>
+                                        <i class="fa-solid fa-heart like-icon-filled like-icon"></i>                               
+                                </div>
+                            </div>
+                            <div class="restaurant-image-location">
+                                 Charonne 
+                            </div>
+                        </div> </a>
+
+
+                        <a href="restaurants/francaise-index.html">
+                            <div class="single-restaurant-bloc">
+                                <div class="restaurant-image-contour">
+                                    <img class="restaurant-image" src="assets/images/restaurants/francaise-image.jpg" title="À la française" alt="image À la française">
+                                </div>  
+                            
+                                <div class="restaurant-image-name-and-like">
+                                    <div class="restaurant-image-name">
+                                        <strong> À la française  </strong>
+                                    </div>
+                                    <div class="like-icon-contour">
+                                            <i class="fa-regular fa-heart like-icon-empty like-icon"></i>
+                                            <i class="fa-solid fa-heart like-icon-filled like-icon"></i>                               
+                                    </div>
+                                </div>
+                                <div class="restaurant-image-location">
+                                    Cité Rouge
+                                </div>
+                            </div> </a>
+
+                            <!--
                 <div class="last-two-restaurents">
-                    <a class="single-restaurant-bloc" href="restaurants/francaise-index.html"> <div>
+                    <a class="single-restaurant-bloc" href="restaurants/francaise-index.html"> 
+                    <div>
                         <div class="restaurant-image-contour">
                             <img class="restaurant-image" src="assets/images/restaurants/francaise-image.jpg" title="À la française" alt="image À la française">
                         </div>
@@ -141,15 +179,38 @@
                                 <p> <strong> À la française </strong></p>
                             </div>
                             <div class="like-icon-contour">
-                                <i class="fa-regular fa-heart like-icon"></i>
-                            </div>
+                                <i class="fa-regular fa-heart like-icon-empty like-icon"></i>
+                                <i class="fa-solid fa-heart like-icon-filled like-icon"></i>                               
+                        </div>
                         </div>
                         <div class="restaurant-image-location">
                             <p> Cité Rouge </p>
                         </div>
-                    </div> </a>
+                    </div> </a> -->
 
-                    <a class="single-restaurant-bloc" href="restaurants/delice-index.html"> <div>
+                    <a href="restaurants/delice-index.html">
+                        <div class="single-restaurant-bloc">
+                            <div class="restaurant-image-contour">
+                                <img class="restaurant-image" src="assets/images/restaurants/delice-image.jpg" title="Le délice des sens" alt="image Le délice des sens">
+                            </div>  
+                        
+                            <div class="restaurant-image-name-and-like">
+                                <div class="restaurant-image-name">
+                                    <strong> Le délice des sens  </strong>
+                                </div>
+                                <div class="like-icon-contour">
+                                        <i class="fa-regular fa-heart like-icon-empty like-icon"></i>
+                                        <i class="fa-solid fa-heart like-icon-filled like-icon"></i>                               
+                                </div>
+                            </div>
+                            <div class="restaurant-image-location">
+                                Folie Méricourt
+                            </div>
+                        </div> </a>
+
+           <!--
+                    <a href="restaurants/delice-index.html"> 
+                    <div class="single-restaurant-bloc">
                         <div class="restaurant-image-contour">
                            <img class="restaurant-image" src="assets/images/restaurants/delice-image.jpg" title="Le délice des sens" alt="image Le délice des sens">
                         </div>
@@ -168,7 +229,7 @@
 
                 </div>
             </div>
-
+-->
 
             
            <!-- <div class="badge2">
@@ -178,9 +239,37 @@
         </div>
         </section>
 
+    </div>
     </main>
 
-    
+
+    <footer class="footer_bloc">
+        <div class="footer-items-bloc">
+            <div class="logo-footer-contour">
+                <img class="logo-footer" src="assets/images/logo/ohmyfood.png" alt="logo_ohmyfood">
+            </div>
+            <div class="footer-links">
+                <div class="footer-link-proposer-restaurant footer-link-with-image footer-lines">
+                    <i class="fa-solid fa-utensils footer-image"></i>
+                    Proposer un restaurant
+                </div>
+                <div class="footer-link-devenir-partenaire footer-link-with-image footer-lines">
+                    <i class="fa-solid fa-handshake-angle footer-image"></i>
+                    Devenir partenaire
+                </div>
+                <div class="footer-lines">
+                    Mention légales
+                </div>
+                <div class="footer-lines last-footer-line">
+                    Contact
+                </div>
+
+            </div>  
+        </div>
+
+    </footer>
+ 
+<!--
     <footer class="footer_bloc">
         <div class="footer-items-bloc">
             <div class="logo-footer-contour">
@@ -201,7 +290,8 @@
         </div>
 
     </footer>
-    
+-->
+
 </body>
 
 </html>
