@@ -1,0 +1,19 @@
+body {   
+    font-family: 'Fuggles', cursive;
+    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Mooli', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    margin:auto; 
+ 
+}
+
+
+.contact-bloc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 30px;
+}

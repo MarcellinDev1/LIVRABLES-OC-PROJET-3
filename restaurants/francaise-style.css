@@ -12,44 +12,26 @@ body {
     font-family: 'Mooli', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
-    /*margin: 50px; */
     height: 100%;
-
     margin:auto; 
-
-    /*padding-left: 10px;
-    padding-right: 10px;*/
     max-width: 1440px;
     min-width: 320px;   
 }
 
-/*
-body{
-    position:relative;*/
-    /*width:100%;*/
-    /*
-}
-*/
 
 .return-homepage{
       font-size: 20px;
       margin-left:15px;
-      /*margin-top: 30px;  
-      margin-bottom: 20px;*/
       opacity:1;
 }
 
 .logo-header-contour{
     width: 100%;
     text-align: center;
-    /*border: 3px solid red;*/
 }
 
 .logo-header{
     width: 90px; 
-    /*margin-top: 20px;*/ 
-   
-}
 
 .header_line{
     display: flex;
@@ -58,19 +40,6 @@ body{
     margin-bottom: 10px;
     margin-top: 15px;
 }
-
-/*
-.main-image-and-menus{
-    position: relative;*/
-    /*margin-bottom:500px;*/
-/*
-}
-*/
-
-/*
-.main-and-footer{
-    position: relative;
-}*/
 
 .restaurant-image{ 
     position: absolute;  
@@ -85,7 +54,6 @@ body{
 }
 
 .meal-category-bloc{
-    /*display:none;*/
     opacity:0;
 }
 
@@ -117,13 +85,7 @@ body{
     animation-fill-mode: forwards;
 }
 
-/*
-.meal-category-bloc{
-    animation-name: meal-categories-display;
-    animation-duration: 300ms;
-    animation-timing-function: linear;
-}
-*/
+
 
 @keyframes meal-categories-display{
     0%{
@@ -138,7 +100,6 @@ body{
 
 
 .the-restaurant-menu{
-    /*position:absolute;*/
     position:relative;
     top: 200px;
     width:100%;
@@ -152,14 +113,15 @@ body{
     flex-direction: row;
     position: relative;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
+    gap:50px;
 }
 
 .restaurant-image-name{
-    font-size: 20px;
+    font-size: 16px;
     font-style: italic;
     font-weight: bolder;    
 }
@@ -167,8 +129,8 @@ body{
 .like-icon{
    font-size:20px;
    position: absolute;
-   right: 15px;
-   top:25px;
+   right: 25%;
+   top:17px;
 }
 
 .like-icon-filled{
@@ -194,9 +156,7 @@ body{
 .description-and-price{
     display: flex;
     flex-direction: row;
-    /*align-items: center;*/
     justify-content: space-between;
-    /*margin-bottom: 30px;*/
     
 }
 
@@ -250,8 +210,6 @@ body{
 }
 
 
-
-
 .the-restaurant-menu{
     background: #F6F6F6;
     padding-bottom: 40px;
@@ -266,19 +224,14 @@ body{
 .commander-msg{
     color:#FFFFFF;
     font-size: 10px;
-    /*text-align: center;*/
 }
 
 
 
 .commander-msg-contour {
-    /*display: flex;*/
-    width: 37%;
+    width: 150px;
     text-align: center;
-    /*border: 3px solid red;*/
     padding: 1px;
-    /*padding-left: 2px;
-    padding-right: 2px;*/
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -306,24 +259,17 @@ body{
     position: absolute;
     max-width: 1440px;
     min-width: 320px;
-    top:1115px;
+    top:1130px;
     background-color: black;
     
     color: white;
     width:100%;
     z-index: 3;
-    /*border:1px solid greenyellow;*/
 }
 
-/*
-.logo-footer-contour{
-    color: white;
-}
-*/
 
 .logo-footer{
     color: white;
-    /*color:red;*/
     filter: brightness(20);
     width:100px ;
     margin-bottom: 5px;
@@ -332,8 +278,6 @@ body{
 
 .footer-items-bloc{
     padding-left: 30px;
-    /*padding-top: 10px;
-    padding-bottom: 10px;*/
     opacity:1;
 }
 
@@ -342,14 +286,10 @@ body{
     flex-direction: row;
     align-items: center;
     gap:30px;
-    /*border:1px solid red;*/
-    /*padding-top: 5px;
-    padding-bottom: 5px;*/
 }
 
 .footer-image{
     width: 0.5px;
-    /*border:1px solid rgb(201, 27, 42);*/
 }
 
 .three-first-footer-lines{
@@ -360,7 +300,6 @@ body{
 .last-footer-line{
     padding-bottom:7px;
     text-decoration: none;
-    /*border:1px solid red;*/
 }
 
 
@@ -384,88 +323,121 @@ body{
 
 @media screen and (min-width: 1025px) {
 
+
+    .restaurant-image-name-and-like{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        gap:50px;
+    }
+    
+    .restaurant-image-name{
+        font-size: 20px;
+        font-style: italic;
+        font-weight: bolder;    
+    }
+    
+    .like-icon{
+       font-size:20px;
+       position: absolute;
+       right: 32%;
+       top:25px;
+    }
+    
+    .like-icon-filled{
+        color:#FF79DA;
+        opacity:0;
+    }
+    
+    .like-icon-empty{
+        opacity:0.3;
+    }
+
+
     .the-restaurant-menu{
-        /*position:absolute;*/
-       /* position:relative;
-        top: 200px;*/
-        width:80%;
+        width:65%;
         margin:auto;
-        /*border-top-right-radius: 25px;
-        border-top-left-radius: 25px;
-        z-index: 2;*/
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+        
+    .like-icon:hover{
+        color:#FF79DA;
+        opacity:1;
+    }
+
+    .tick-box-choice{
+        opacity:0;
+    }
+
+    .single-meal-result-and-choice:hover{ 
+    cursor: pointer;
+    }
+
+    .single-meal-result-and-choice:hover{ 
+        width:100%;
+
+    }
+
+    .single-meal-result-and-choice:hover .single-meal-result{ 
+        transform-origin: left;  
+        animation-name: selection-indicator-meal;
+        animation-duration: 300ms;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        
+    }
+
+    .single-meal-result-and-choice:hover .tick-box-choice{ 
+        transform-origin: right; 
+        animation-name: selection-indicator-check;
+        animation-duration: 300ms;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+
+        display:flex;
+        opacity:1;
+        width: 12%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        height: 53px;
+        background-color: aquamarine;
+        
     }
 
 
-    
-.like-icon:hover{
-    color:#FF79DA;
-    opacity:1;
-}
-
-.tick-box-choice{
-    opacity:0;
-}
-
-.single-meal-result-and-choice:hover{ 
-cursor: pointer;
-}
-
- .single-meal-result-and-choice:hover{ 
-    width:100%;
-
- }
-
- .single-meal-result-and-choice:hover .single-meal-result{ 
-    transform-origin: left;  
-    animation-name: selection-indicator-meal;
-    animation-duration: 300ms;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-    
- }
-
- .single-meal-result-and-choice:hover .tick-box-choice{ 
-    transform-origin: right; 
-    animation-name: selection-indicator-check;
-    animation-duration: 300ms;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-
-    display:flex;
-    opacity:1;
-    width: 12%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    height: 53px;
-    background-color: aquamarine;
-    
- }
-
-
- @keyframes selection-indicator-meal{
-    0% {width:100%;
-        border-top-right-radius: 0px;  
-        border-bottom-right-radius: 0px;
-        }
-
-    100%{width:80%;
-        border-top-right-radius: 0px;  
-        border-bottom-right-radius: 0px;
-        }
-    }   
-
-    @keyframes selection-indicator-check{
-         0% {
-            width: 0%;         
+    @keyframes selection-indicator-meal{
+        0% {width:100%;
+            border-top-right-radius: 0px;  
+            border-bottom-right-radius: 0px;
             }
-     
-         100%{
-            width:15%;
-             }
-    }
+
+        100%{width:80%;
+            border-top-right-radius: 0px;  
+            border-bottom-right-radius: 0px;
+            }
+        }   
+
+        @keyframes selection-indicator-check{
+            0% {
+                width: 0%; 
+                overflow: hidden;        
+                }
+        
+            100%{
+                width:15%;
+                overflow: hidden;  
+                }
+        }
 
 
 
