@@ -13,11 +13,12 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
     height: 100%;
+
     margin:auto; 
+
     max-width: 1440px;
     min-width: 320px;   
 }
-
 
 .return-homepage{
       font-size: 20px;
@@ -88,7 +89,6 @@ body {
     animation-fill-mode: forwards;
 }
 
-
 @keyframes meal-categories-display{
     0%{
         opacity:0;
@@ -113,35 +113,32 @@ body {
 .restaurant-image-name-and-like{
     display: flex;
     flex-direction: row;
-    position: relative;
     align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 40px;
     margin-bottom: 20px;
-    gap:50px;
 }
 
 .restaurant-image-name{
-    font-size: 16px;
+    font-size: 20px;
     font-style: italic;
     font-weight: bolder;    
 }
 
 .like-icon{
    font-size:20px;
-   position: absolute;
-   right: 25%;
-   top:17px;
 }
 
 .like-icon-filled{
     color:#FF79DA;
     opacity:0;
+    float: left;
 }
 
 .like-icon-empty{
     opacity:0.3;
+    margin-left:-20px;
 }
 
 
@@ -152,6 +149,7 @@ body {
     width: 33px;
     margin-bottom: 20px;
     margin-top: 2px;
+    margin-left: 10px;
 }
  
 
@@ -212,6 +210,8 @@ body {
 }
 
 
+
+
 .the-restaurant-menu{
     background: #F6F6F6;
     padding-bottom: 40px;
@@ -219,6 +219,10 @@ body {
 
 .meal-category-bloc{
     margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.meal-category{
     margin-left: 10px;
 }
 
@@ -268,8 +272,6 @@ body {
     width:100%;
     z-index: 3;
 }
-
-
 
 .logo-footer{
     color: white;
@@ -330,13 +332,12 @@ body {
     .restaurant-image-name-and-like{
         display: flex;
         flex-direction: row;
-        position: relative;
         align-items: center;
         justify-content: center;
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 20px;
-        gap:50px;
+        gap:25px;
     }
     
     .restaurant-image-name{
@@ -347,21 +348,22 @@ body {
     
     .like-icon{
        font-size:20px;
-       position: absolute;
-       right: 32%;
-       top:25px;
     }
-    
     .like-icon-filled{
         color:#FF79DA;
-        opacity:0;
+        opacity:0;        
+        float: left;
     }
     
     .like-icon-empty{
         opacity:0.3;
+        margin-left: -20px;
     }
 
-
+    .like-icon-filled:hover{
+        opacity:1;
+    }
+    
     .the-restaurant-menu{
         width:65%;
         margin:auto;
@@ -369,25 +371,34 @@ body {
         padding-right: 100px;
     }
 
-        
-    .like-icon:hover{
-        color:#FF79DA;
-        opacity:1;
-    }
-
     .tick-box-choice{
-        opacity:0;
+        opacity:1;
     }
 
     .single-meal-result-and-choice:hover{ 
     cursor: pointer;
     }
 
-    .single-meal-result-and-choice:hover{ 
-        width:100%;
-
+    .tick-box-choice{
+    display:flex;
+    opacity:1;
+    width:0%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 53px;
+    background-color: aquamarine;
     }
 
+    .tick-box-choice{
+        opacity:0; 
+        }
+
+    .single-meal-result{
+        width:100%;
+    }
+  
     .single-meal-result-and-choice:hover .single-meal-result{ 
         transform-origin: left;  
         animation-name: selection-indicator-meal;
@@ -402,21 +413,14 @@ body {
         animation-name: selection-indicator-check;
         animation-duration: 300ms;
         animation-timing-function: linear;
-        animation-fill-mode: both;
-
-        display:flex;
-        opacity:1;
-        width: 12%;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-        height: 53px;
-        background-color: aquamarine;
-        
+        animation-fill-mode: both;        
     }
+    
 
+    .single-meal-result-and-choice{
+        overflow: hidden;
+
+    }
 
     @keyframes selection-indicator-meal{
         0% {width:100%;
@@ -424,7 +428,7 @@ body {
             border-bottom-right-radius: 0px;
             }
 
-        100%{width:80%;
+        100%{width:87%;
             border-top-right-radius: 0px;  
             border-bottom-right-radius: 0px;
             }
@@ -432,15 +436,15 @@ body {
 
         @keyframes selection-indicator-check{
             0% {
-                width: 0%; 
-                overflow: hidden;        
+                width: 0%;       
                 }
         
             100%{
-                width:15%;
-                overflow: hidden;  
+                width:13%;
+                opacity:1;
                 }
         }
+        
 
 
 
