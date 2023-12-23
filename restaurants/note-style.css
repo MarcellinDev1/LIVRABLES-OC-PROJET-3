@@ -212,6 +212,131 @@ body {
 
 
 
+.single-meal-result-and-choice:hover{ 
+    cursor: pointer;
+    }
+
+    .tick-box-choice{
+    display:flex;
+    opacity:1;
+    width:0%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 53px;
+    background-color: aquamarine;
+    }
+
+    .tick-box-choice{
+        opacity:0; 
+        }
+
+    .single-meal-result{
+        width:100%;
+    }
+  
+    .single-meal-result-and-choice:active .single-meal-result{ 
+        transform-origin: left;    
+        animation-name: selection-indicator-meal;
+        animation-duration: 300ms;
+        animation-fill-mode: both, forwards;
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-iteration-count: even;
+       
+       :focus{
+            width:87%; 
+        }
+        :target{
+            width:87%; 
+        }  
+        
+        
+    }
+
+    .single-meal-result-and-choice:active .tick-box-choice{ 
+        transform-origin: right; 
+        animation-name: selection-indicator-check;
+        animation-duration: 300ms;
+        animation-fill-mode: both, forwards;
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-iteration-count: even;
+        :focus{
+            width:13%; 
+        }
+        
+        :target{
+            width:13%; 
+        }    
+    }
+    
+
+    .single-meal-result-and-choice{
+        overflow: hidden;
+
+    }
+
+    @keyframes selection-indicator-meal{
+        0% {width:100%;
+            border-top-right-radius: 0px;  
+            border-bottom-right-radius: 0px;
+            }
+
+        100%{width:87%;
+            border-top-right-radius: 0px;  
+            border-bottom-right-radius: 0px;
+          /*  :focus{
+                width:87%; 
+            }
+            :target{
+                width:87%; 
+            }*/
+            }
+        }   
+
+        @keyframes selection-indicator-check{
+            0% {
+                width: 0%;       
+                }
+        
+            100%{
+                width:13%;
+                opacity:1;
+                /*:focus{
+                    width:13%; 
+                }
+                :target{
+                    width:13%; 
+                }*/
+                }
+        }
+
+        /*
+        .single-meal-result-and-choice:focus-visible .single-meal-result{ 
+
+            width: 87%;
+            
+        }
+    
+        .single-meal-result-and-choice:focus-visible .tick-box-choice{ 
+ 
+            width:13%;      
+        }
+        */
+
+        /*
+        .single-meal-result:target{ 
+            width: 87%;            
+        }
+
+        .tick-box-choice:target{
+            width: 13%; 
+        }
+*/
+
+
 .the-restaurant-menu{
     background: #F6F6F6;
     padding-bottom: 40px;
