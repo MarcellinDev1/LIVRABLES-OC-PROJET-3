@@ -110,37 +110,70 @@ body {
     z-index: 2;
 }
 
-.restaurant-image-name-and-like{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 40px;
-    margin-bottom: 20px;
-}
 
 .restaurant-image-name{
     font-size: 20px;
     font-style: italic;
-    font-weight: bolder;    
+    font-weight: bolder; 
+    padding-top: 10px;
+    margin-bottom: 20px; 
+    margin-left: 20px;  
 }
+
+
+#heart-activate-div{
+    display:none;
+}
+
 
 .like-icon{
    font-size:20px;
+   cursor: pointer;
+   position:absolute;
+   top:35px;
+   right:40px;
 }
 
 .like-icon-filled{
+    position:absolute;
+    z-index: 1;
     color:#FF79DA;
     opacity:0;
     float: left;
 }
 
 .like-icon-empty{
+    position:absolute;
+    z-index: 1;
     opacity:0.3;
-    margin-left:-20px;
+    margin-left:-89px;
 }
 
+.heart-label{
+    position:absolute;
+    z-index:3;
+    top:36.5px;
+    right:41px;
+    border:1px solid red;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+#heart-activate-div:checked +.like-icon-filled{
+    color:#FF79DA;
+    opacity:1;
+}
+
+#heart-activate-div:checked~.like-icon-empty{
+    opacity:0;
+}
 
 
 .underline{
@@ -162,13 +195,21 @@ body {
 
 
 .single-meal-result-and-choice{
+    position:relative;
     display: flex;
     flex-direction: row;
     margin-left: 10px;
-    margin-right: 10px;   
+    margin-right: 10px;  
+    border-top-right-radius: 10px;  
+    border-bottom-right-radius: 10px; 
+    border-top-left-radius: 10px;  
+    border-bottom-left-radius: 10px; 
+    margin-bottom: 10px;
+    height:70px;
+    overflow: hidden;
 }
 
-.tick-box{
+.tick-box-mobile{
     font-size: 15px;
     background-color:white;
     border-radius: 50%;
@@ -192,109 +233,115 @@ body {
     white-space: nowrap;
 }
 
-.single-meal-result{
-    margin-bottom: 10px;
-    padding:10px;
+.single-meal-result{   
+    padding:15px;
     border-top-left-radius: 10px;   
-    border-bottom-left-radius: 10px;  
-    border-top-right-radius: 10px;  
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
     background-color: white;
-    height: 100%;
+    height:70px;
     width:100%;
 
 }
 
-.tick-box-choice{
+.tick-box-choice-mobile{
     opacity:0;
 }
-
-
-
 
 .single-meal-result-and-choice:hover{ 
     cursor: pointer;
     }
 
-    .tick-box-choice{
+.tick-box-choice-mobile{
+display:flex;
+opacity:1;
+width:0%;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+align-items: center;
+justify-content: center;
+height: 70px;
+background-color: aquamarine;
+}
+
+.tick-box-choice-mobile{
+    opacity:0; 
+    }
+
+.single-meal-result{
+    width:100%;
+}
+ 
+.activate-desktop-div{
+    display:none;
+
+}
+
+.tick-box-choice-desktop{
+    display: none;
+}
+
+.tick-box-desktop{
+    display: none;
+}
+
+.label-d-bloc{
+    display:none;
+}
+
+.label-m{
+    display: flex;
+    position: absolute;
+    left:200px;
+    top:10px;
+}
+
+.label-m{
+    display:none;
+}
+
+
+.activate-mobile-div{
+    appearance: none;
+    -webkit-appearance: none;
+    height:75px;
+    width:100%;
+    background-color: #9356DC;
+    cursor:pointer;
     display:flex;
-    opacity:1;
-    width:0%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    height: 53px;
-    background-color: aquamarine;
-    }
-
-    .tick-box-choice{
-        opacity:0; 
-        }
-
-    .single-meal-result{
-        width:100%;
-    }
-  
-    .single-meal-result-and-choice:active .single-meal-result{ 
-        transform-origin: left;    
-        animation-name: selection-indicator-meal;
-        animation-duration: 300ms;
-        animation-fill-mode: both, forwards;
-        animation-timing-function: linear;
-        animation-direction: normal;
-        animation-iteration-count: even;
-       
-       :focus{
-            width:87%; 
-        }
-        :target{
-            width:87%; 
-        }  
-        
-        
-    }
-
-    .single-meal-result-and-choice:active .tick-box-choice{ 
-        transform-origin: right; 
-        animation-name: selection-indicator-check;
-        animation-duration: 300ms;
-        animation-fill-mode: both, forwards;
-        animation-timing-function: linear;
-        animation-direction: normal;
-        animation-iteration-count: even;
-        :focus{
-            width:13%; 
-        }
-        
-        :target{
-            width:13%; 
-        }    
-    }
+    outline:none;
+    position:absolute;
+    margin-top:-5px;
+    opacity:0;
+    border-radius: 10px;
+    margin-left:0px;
+    margin-right: 0px;
     
+}
 
-    .single-meal-result-and-choice{
-        overflow: hidden;
 
-    }
 
-    @keyframes selection-indicator-meal{
-        0% {width:100%;
-            border-top-right-radius: 0px;  
-            border-bottom-right-radius: 0px;
-            }
+.activate-mobile-div:checked+.tick-box-choice-mobile{
+    transform-origin: right; 
+    animation-name: selection-indicator-check;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+    animation-timing-function: linear; 
+}
 
-        100%{width:87%;
-            border-top-right-radius: 0px;  
-            border-bottom-right-radius: 0px;
-          /*  :focus{
-                width:87%; 
-            }
-            :target{
-                width:87%; 
-            }*/
-            }
-        }   
+.activate-mobile-div:not(:checked)+.tick-box-choice-mobile{
+    transform-origin: right; 
+    animation-name: selection-indicator-not-check;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+
+.activate-mobile-div:checked +.tick-box-choice-mobile{
+    width:13%;
+    opacity:1;
+}
+
 
         @keyframes selection-indicator-check{
             0% {
@@ -304,37 +351,22 @@ body {
             100%{
                 width:13%;
                 opacity:1;
-                /*:focus{
-                    width:13%; 
-                }
-                :target{
-                    width:13%; 
-                }*/
                 }
         }
 
-        /*
-        .single-meal-result-and-choice:focus-visible .single-meal-result{ 
+        @keyframes selection-indicator-not-check{
+            0% {
+                width:13%;
+                opacity:1;
+                     
+                }
+        
+            100%{
+                width: 0%;  
 
-            width: 87%;
-            
-        }
-    
-        .single-meal-result-and-choice:focus-visible .tick-box-choice{ 
- 
-            width:13%;      
-        }
-        */
-
-        /*
-        .single-meal-result:target{ 
-            width: 87%;            
+                }
         }
 
-        .tick-box-choice:target{
-            width: 13%; 
-        }
-*/
 
 
 .the-restaurant-menu{
@@ -390,7 +422,7 @@ body {
     position: absolute;
     max-width: 1440px;
     min-width: 320px;
-    top:1130px;
+    top:1240px;
     background-color: black;
     
     color: white;
@@ -470,6 +502,46 @@ body {
         font-style: italic;
         font-weight: bolder;    
     }
+
+    
+    .restaurant-image-name-and-like{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin:auto;
+        width: 40%;
+    }
+
+    #heart-activate-div:checked +.like-icon-filled{
+    }
+    
+    #heart-activate-div:checked~.like-icon-empty{
+    }
+
+
+
+    .like-icon{
+        font-size:20px;
+        cursor: pointer;
+        position:absolute;
+     }
+     
+     .like-icon-filled{
+         position:absolute;
+         color:#FF79DA;
+         opacity:0;
+         float: left;
+     }
+     
+     .like-icon-empty{
+         position:absolute;
+         opacity:0.3;
+     }
+
+
+
     
     .like-icon{
        font-size:20px;
@@ -488,6 +560,16 @@ body {
     .like-icon-filled:hover{
         opacity:1;
     }
+
+
+    #heart-activate-div:hover +.like-icon-filled{
+         color:#FF79DA;
+         opacity:1;
+     }
+     
+     #heart-activate-div:hover~.like-icon-empty{
+        opacity:0;
+     }
     
     .the-restaurant-menu{
         width:65%;
@@ -496,44 +578,108 @@ body {
         padding-right: 100px;
     }
 
-    .tick-box-choice{
+    .tick-box-desktop{
+        font-size: 15px;
+        background-color:white;
+        border-radius: 50%;
+        color:aquamarine;  
+
+    }
+
+    .tick-box-choice-desktop{
         opacity:1;
     }
+
+
 
     .single-meal-result-and-choice:hover{ 
     cursor: pointer;
     }
 
-    .tick-box-choice{
-    display:flex;
-    opacity:1;
-    width:0%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    height: 53px;
-    background-color: aquamarine;
-    }
+    .tick-box-choice-desktop{
+        display:flex;
+        opacity:1;
+        width:0%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        background-color: aquamarine;
+        }
 
-    .tick-box-choice{
+    .tick-box-choice-desktop{
         opacity:0; 
         }
 
     .single-meal-result{
         width:100%;
     }
-  
-    .single-meal-result-and-choice:hover .single-meal-result{ 
-        transform-origin: left;  
-        animation-name: selection-indicator-meal;
-        animation-duration: 300ms;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
+
+    .activate-desktop-div{
+        display:inline-block;
+    }
+    
+    .tick-box-choice-desktop{
+        display: flex;;
+    }
+    
+    .tick-box-desktop{
+        display: flex;
+    }
+    
+    .label-d-bloc{
+        display:inline-block;
+    }
+
+    .activate-mobile-div{
+        display:none;
+    }
+    
+    .tick-box-choice-mobile{
+        display: none;
+    }
+    
+    .tick-box-mobile{
+        display: none;
+    }
+    
+    .label-m-bloc{
+        display:none;
+    }
+    
+
+    
+    .label-d{
+        display: flex;
+        position: absolute;
+        left:250px;
+        top:10px;
+    }
+
+    .label-d{
+        display: none;
+    }
+
+    .activate-desktop-div{
+        appearance: none;
+        -webkit-appearance: none;
+        height:75px;
+        width:100%;
+        background-color: yellow;
+        cursor:pointer;
+        display:flex;
+        outline:none;
+        position:absolute;
+        margin-top:-5px;
+        opacity:0;
+        border-radius: 10px;
+        margin-left:0px;
+        margin-right: 0px;
         
     }
 
-    .single-meal-result-and-choice:hover .tick-box-choice{ 
+    .single-meal-result-and-choice:hover .tick-box-choice-desktop{ 
         transform-origin: right; 
         animation-name: selection-indicator-check;
         animation-duration: 300ms;
@@ -541,7 +687,6 @@ body {
         animation-fill-mode: both;        
     }
     
-
     .single-meal-result-and-choice{
         overflow: hidden;
 
@@ -570,7 +715,17 @@ body {
                 }
         }
         
-
+        .footer_bloc{
+            position: absolute;
+            max-width: 1440px;
+            min-width: 320px;
+            top:1260px;
+            background-color: black;
+            
+            color: white;
+            width:100%;
+            z-index: 3;
+        }
 
 
     .footer-items-bloc{
@@ -613,6 +768,5 @@ body {
     }
 
 }
-
 
 
